@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Yönetim Paneli - Mabeyn Cafe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="admin.js"></script>
+</head>
+
+<body class="admin-body">
+  <header class="admin-header">
+    <div>Mabeyn Cafe Yönetim Paneli</div>
+    <button id="logoutBtn">Çıkış</button>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-section">
+      <h2>Menü Düzenle</h2>
+      <p>Menü verilerini aşağıdan düzenleyebilirsiniz.</p>
+
+      <textarea id="menuEditor"></textarea>
+      <button id="saveMenuBtn">Kaydet</button>
+
+      <p id="saveStatus" class="save-status"></p>
+    </section>
+  </main>
+</body>
+</html>

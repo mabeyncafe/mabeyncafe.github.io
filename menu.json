@@ -1,0 +1,20 @@
+{
+  "categories": [
+    {
+      "id": "kahveler",
+      "name": "Kahveler",
+      "items": [
+        { "name": "Espresso", "price": "45₺", "desc": "" },
+        { "name": "Latte", "price": "65₺", "desc": "" }
+      ]
+    },
+    {
+      "id": "soguk-icecekler",
+      "name": "Soğuk İçecekler",
+      "items": [
+        { "name": "Ice Latte", "price": "70₺", "desc": "" },
+        { "name": "Limonata", "price": "55₺", "desc": "" }
+      ]
+    }
+  ]
+}
