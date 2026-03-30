@@ -1,65 +1,32 @@
-body.homepage {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(180deg, #0d0d0d, #1a1a1a);
-  color: #fff;
-}
-
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  border-bottom: 2px solid #d4af37;
-}
-
-.hero h1 {
-  font-size: 52px;
+.accordion-btn {
+  background-color: #111;
   color: #d4af37;
-  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
-.hero p {
-  font-size: 22px;
-  color: #aaa;
+.accordion-btn:hover {
+  background-color: #222;
 }
 
-.menu-section {
-  padding: 40px 20px;
-  text-align: center;
+.accordion-content {
+  display: none;
+  background-color: #1a1a1a;
+  padding: 10px 20px;
 }
 
-.menu-section h2 {
-  color: #d4af37;
-  margin-top: 30px;
-}
-
-.menu-section ul {
+.accordion-content ul {
   list-style: none;
   padding: 0;
 }
 
-.menu-section li {
-  margin: 8px 0;
-  font-size: 18px;
+.accordion-content li {
+  margin: 6px 0;
   color: #eee;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  border-top: 2px solid #d4af37;
-  color: #777;
-}
-
-footer .admin-link {
-  font-size: 12px;
-  margin-bottom: 8px;
-}
-
-footer .admin-link a {
-  color: #555;
-  text-decoration: none;
-}
-
-footer .admin-link a:hover {
-  color: #d4af37;
 }
