@@ -327,3 +327,67 @@ footer .admin-link {
   text-decoration: none;
   font-weight: bold;
 }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: #6b3e26;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+header .logo {
+  max-height: 100px;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.menu-category {
+  background: #fff;
+  margin: 25px auto;
+  padding: 25px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.menu-category h2 a {
+  text-decoration: none;
+  color: #6b3e26;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f4f4f4;
+  margin-top: 40px;
+}
+
+footer .admin-link {
+  color: #6b3e26;
+  text-decoration: none;
+  font-weight: bold;
+}
