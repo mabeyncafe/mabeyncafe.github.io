@@ -2,47 +2,34 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Yönetici Girişi - Mabeyn Cafe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yönetici Girişi</title>
   <link rel="stylesheet" href="style.css">
-
-  <script defer>
-    const VALID_USER = "mabeynyonetici";
-    const VALID_PASS = "123Mabeyn";
-
-    function handleLogin(e) {
-      e.preventDefault();
-      const u = document.getElementById("username").value.trim();
-      const p = document.getElementById("password").value.trim();
-      const msg = document.getElementById("loginMessage");
-
-      if (u === VALID_USER && p === VALID_PASS) {
-        sessionStorage.setItem("mabeynLoggedIn", "1");
-        window.location.href = "admin.html";
-      } else {
-        msg.textContent = "Kullanıcı adı veya şifre hatalı.";
-      }
-    }
-  </script>
 </head>
-
-<body class="login-body">
-  <div class="login-card">
-    <h1>Mabeyn Cafe</h1>
-    <h2>Yönetici Girişi</h2>
-
-    <form onsubmit="handleLogin(event)">
-      <label>Kullanıcı Adı</label>
-      <input id="username" type="text">
-
-      <label>Şifre</label>
-      <input id="password" type="password">
-
+<body>
+  <div class="login-container">
+    <h2>Mabeyn Cafe Yönetici Girişi</h2>
+    <form onsubmit="return loginUser(event)">
+      <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+      <input type="password" id="password" placeholder="Şifre" required>
       <button type="submit">Giriş Yap</button>
-      <p id="loginMessage" class="login-message"></p>
     </form>
-
-    <a href="index.html" class="back-link">← Menüyü Görüntüle</a>
   </div>
+
+  <script src="admin.js"></script>
 </body>
 </html>
+function loginUser(event) {
+  event.preventDefault();
+
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  // Basit kontrol (örnek)
+  if (username === "admin" && password === "1234") {
+    // Doğru giriş → admin paneline yönlendir
+    window.location.href = "admin.html";
+  } else {
+    alert("Hatalı kullanıcı adı veya şifre!");
+  }
+}
