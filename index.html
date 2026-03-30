@@ -7,15 +7,17 @@
 </head>
 <body>
   <header>
+    <img src="logo.png" alt="Mabeyn Cafe Logo" class="logo">
     <h1>Mabeyn Cafe</h1>
-    <nav>
-      <a href="admin.html">Yönetici Girişi</a>
-    </nav>
   </header>
 
   <main>
     <div id="menu-container"></div>
   </main>
+
+  <footer>
+    <a href="admin.html" class="admin-link">Yönetici Girişi</a>
+  </footer>
 
   <script>
     window.onload = function() {
@@ -32,46 +34,10 @@
         });
 
         for(let menuName in grouped){
-          let section = document.createElement('div');
-          section.className = "accordion-section";
-
-          let header = document.createElement('button');
-          header.className = "accordion";
-          header.innerText = menuName;
-          section.appendChild(header);
-
-          let panel = document.createElement('div');
-          panel.className = "panel";
-
-          grouped[menuName].forEach(item => {
-            let card = document.createElement('div');
-            card.className = "menu-card";
-            card.innerHTML = `<strong>${item.name}</strong> - ${item.price}<br><small>${item.desc}</small>`;
-            if(item.image){
-              let img = document.createElement('img');
-              img.src = item.image;
-              img.className = "menu-img";
-              card.appendChild(img);
-            }
-            panel.appendChild(card);
-          });
-
-          section.appendChild(panel);
-          container.appendChild(section);
-        }
-
-        // Accordion davranışı
-        let acc = document.getElementsByClassName("accordion");
-        for (let i = 0; i < acc.length; i++) {
-          acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            let panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-              panel.style.display = "none";
-            } else {
-              panel.style.display = "block";
-            }
-          });
+          let card = document.createElement('div');
+          card.className = "menu-category";
+          card.innerHTML = `<h2><a href="${menuName}.html">${menuName}</a></h2>`;
+          container.appendChild(card);
         }
       }
     };
