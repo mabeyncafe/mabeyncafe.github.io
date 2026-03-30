@@ -1,0 +1,87 @@
+/* Ürün listesi */
+#item-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Ürün kartı */
+#item-list li {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  width: 220px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+}
+
+#item-list li:hover {
+  transform: scale(1.03);
+}
+
+/* Dark tema için kartlar */
+body.dark #item-list li {
+  background: #2c2c2c;
+  border: 1px solid #444;
+  color: #f1f1f1;
+}
+
+body.dark #item-list li strong {
+  color: gold;
+}
+
+body.dark #item-list li em {
+  color: #ccc;
+}
+
+body.dark #item-list li small {
+  color: #bbb;
+}
+
+/* Ürün görseli */
+#item-list li img {
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+/* Ürün adı ve fiyat */
+#item-list li strong {
+  font-size: 16px;
+  color: #333;
+}
+
+#item-list li em {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Açıklama */
+#item-list li small {
+  display: block;
+  margin-top: 5px;
+  color: #555;
+}
+
+/* Düzenle / Sil butonları */
+#item-list li button {
+  margin-top: 8px;
+  margin-right: 6px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#item-list li button:first-of-type {
+  background: #007bff;
+  color: #fff;
+}
+
+#item-list li button:last-of-type {
+  background: #dc3545;
+  color: #fff;
+}

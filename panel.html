@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<link rel="stylesheet" href="style.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mabeyn Cafe Yönetici Paneli</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="panel-container">
+    <header class="panel-header">
+      <h1>Yönetici Paneli</h1>
+      <p>Hoşgeldiniz, mabeyn</p>
+    </header>
+
+    <nav class="panel-nav">
+      <button onclick="showSection('menu')">Menü Başlıkları</button>
+      <button onclick="showSection('items')">Ürünler</button>
+      <button onclick="showSection('theme')">Tema Ayarları</button>
+      <button onclick="showSection('images')">Fotoğraf Düzenleme</button>
+    </nav>
+
+    <main class="panel-main">
+      <!-- Menü başlıkları -->
+      <section id="menu" class="panel-section">
+        <h2>Menü Başlıkları</h2>
+        <ul id="menu-list"></ul>
+        <input type="text" id="newMenu" placeholder="Yeni menü başlığı">
+        <button onclick="addMenu()">Ekle</button>
+      </section>
+
+      <!-- Ürünler -->
+    
+<section id="items" class="panel-section" style="display:none;">
+  <h2>Ürünler</h2>
+  
+  <div class="item-form">
+    <label for="itemName">Ürün Adı</label>
+    <input type="text" id="itemName" placeholder="Örn: Türk Kahvesi">
+
+    <label for="itemPrice">Fiyat</label>
+    <input type="text" id="itemPrice" placeholder="Örn: 45₺">
+
+    <label for="itemDesc">Açıklama</label>
+    <textarea id="itemDesc" placeholder="Ürün açıklaması..."></textarea>
+
+    <label for="itemImage">Fotoğraf</label>
+    <input type="file" id="itemImage" accept="image/*">
+    <label for="itemMenu">Menü Seç</label>
+<select id="itemMenu">
+  <option value="">Menü seçiniz...</option>
+</select>
+
+    <button onclick="addItem()">Ürün Ekle</button>
+  </div>
+
+  <h3>Eklenen Ürünler</h3>
+  <ul id="item-list"></ul>
+</section>
+
+
+
+
+
+      <!-- Tema -->
+      <section id="theme" class="panel-section" style="display:none;">
+        <h2>Tema Ayarları</h2>
+        <button onclick="changeTheme('dark')">Koyu Tema</button>
+        <button onclick="changeTheme('light')">Açık Tema</button>
+      </section>
+
+      <!-- Fotoğraflar -->
+      <section id="images" class="panel-section" style="display:none;">
+        <h2>Fotoğraf Düzenleme</h2>
+        <p>Ürün fotoğrafları buradan yüklenecek.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="panel.js"></script>
+</body>
+</html>
