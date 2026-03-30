@@ -203,4 +203,63 @@ header nav a {
   border-radius: 8px;
   margin-top: 10px;
 }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: #6b3e26;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header .logo {
+  max-height: 80px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.menu-category {
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.menu-category:hover {
+  transform: scale(1.03);
+}
+
+.menu-category h2 a {
+  text-decoration: none;
+  color: #6b3e26;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+footer .admin-link {
+  color: #6b3e26;
+  text-decoration: none;
+  font-weight: bold;
+}
 
