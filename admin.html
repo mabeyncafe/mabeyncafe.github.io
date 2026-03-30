@@ -2,28 +2,73 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Yönetim Paneli - Mabeyn Cafe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mabeyn Cafe Yönetim Paneli</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="admin.js"></script>
 </head>
+<body>
+  <div class="sidebar">
+    <h2>Mabeyn Cafe</h2>
+    <ul>
+      <li class="active">Ana Panel</li>
+      <li>Ürün Yönetimi</li>
+      <li>Kategori Yönetimi</li>
+      <li>Tasarım Ayarları</li>
+      <li>Genel Ayarlar</li>
+    </ul>
+  </div>
 
-<body class="admin-body">
-  <header class="admin-header">
-    <div>Mabeyn Cafe Yönetim Paneli</div>
-    <button id="logoutBtn">Çıkış</button>
-  </header>
+  <div class="main-content">
+    <header>
+      <h1>Yönetim Paneli</h1>
+      <button class="logout">Çıkış</button>
+    </header>
 
-  <main class="admin-main">
-    <section class="admin-section">
-      <h2>Menü Düzenle</h2>
-      <p>Menü verilerini aşağıdan düzenleyebilirsiniz.</p>
-
-      <textarea id="menuEditor"></textarea>
-      <button id="saveMenuBtn">Kaydet</button>
-
-      <p id="saveStatus" class="save-status"></p>
+    <section class="stats">
+      <div class="card">
+        <h3>Toplam Ürünler</h3>
+        <p>1.250</p>
+      </div>
+      <div class="card">
+        <h3>Bugün Eklenen Ürünler</h3>
+        <p>32</p>
+      </div>
+      <div class="card">
+        <h3>Yeni Siparişler</h3>
+        <p>8</p>
+      </div>
+      <div class="card">
+        <h3>Toplam Kazanç</h3>
+        <p>₺24.580</p>
+      </div>
     </section>
-  </main>
+
+    <section class="management">
+      <div class="panel-card">
+        <h3>Ürün Yönetimi</h3>
+        <p>Ürün ekle, düzenle, sil</p>
+        <button>Yönet</button>
+      </div>
+      <div class="panel-card">
+        <h3>Kategori Yönetimi</h3>
+        <p>Kategorileri düzenle</p>
+        <button>Yönet</button>
+      </div>
+      <div class="panel-card">
+        <h3>Tasarım Ayarları</h3>
+        <p>Tema ve renkleri değiştir</p>
+        <button>Yönet</button>
+      </div>
+      <div class="panel-card">
+        <h3>Genel Ayarlar</h3>
+        <p>Panel ayarlarını yönetin</p>
+        <button>Yönet</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Mabeyn Cafe Yönetim Paneli – Premium Edition</p>
+    </footer>
+  </div>
 </body>
 </html>
