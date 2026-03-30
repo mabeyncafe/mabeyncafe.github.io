@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mabeyn Cafe Menü</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Mabeyn Cafe Menü</h1>
+  <div id="menu-container"></div>
+
+  <script>
+    window.onload = function() {
+      let items = JSON.parse(localStorage.getItem('items')) || [];
+      let container = document.getElementById('menu-container');
+
+      if(items.length === 0){
+        container.innerHTML = "<p>Henüz menüye ürün eklenmedi.</p>";
+      } else {
+        // Menüleri grupla
+        let grouped = {};
+        items.forEach(item => {
+          if(!grouped[item.menu]) grouped[item.menu] = [];
+          grouped[item.menu].push(item);
+        });
+
+        // Her menü için başlık ve ürün kartları
+        for(let menuName in grouped){
+          let section = document.createElement('div');
+          section.innerHTML = `<h2>${menuName}</h2>`;
+          
+          let list = document.createElement('div');
+          list.style.display = "flex";
+          list.style.flexWrap = "wrap";
+          list.style.gap = "15px";
+
+          grouped[menuName].forEach(item => {
+            let card = document.createElement('div');
+            card.style.background = "#fff";
+            card.style.border = "1px solid #ddd";
+            card.style.borderRadius = "8px";
+            card.style.padding = "12px";
+            card.style.width = "200px";
+            card.style.boxShadow = "0 2px 6px rgba(0,0,0,0.1)";
+
+            let content = `<strong>${item.name}</strong> - ${item.price}<br><small>${item.desc}</small>`;
+            card.innerHTML = content;
+
+            if(item.image){
+              let img = document.createElement('img');
+              img.src = item.image;
+              img.style.maxWidth = "100%";
+              img.style.borderRadius = "6px";
+              img.style.marginTop = "8px";
+              card.appendChild(img);
+            }
+
+            list.appendChild(card);
+          });
+
+          section.appendChild(list);
+          container.appendChild(section);
+        }
+      }
+    };
+  </script>
+</body>
+</html>
