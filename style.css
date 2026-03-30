@@ -85,3 +85,64 @@ body.dark #item-list li small {
   background: #dc3545;
   color: #fff;
 }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: #6b3e26;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+section {
+  margin: 30px;
+}
+
+section h2 {
+  border-bottom: 2px solid #6b3e26;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.menu-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 220px;
+  transition: transform 0.2s;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+}
+
+.menu-img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
