@@ -9,6 +9,7 @@
   <header>
     <img src="logo.png" alt="Mabeyn Cafe Logo" class="logo">
     <h1>Mabeyn Cafe</h1>
+    <hr>
   </header>
 
   <main>
@@ -36,7 +37,7 @@
         for(let menuName in grouped){
           let card = document.createElement('div');
           card.className = "menu-category";
-          card.innerHTML = `<h2><a href="${menuName}.html">${menuName}</a></h2>`;
+          card.innerHTML = `<a href="${menuName}.html">${menuName}</a>`;
           container.appendChild(card);
         }
       }
