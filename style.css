@@ -1,396 +1,4 @@
-/* Ürün listesi */
-#item-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-/* Ürün kartı */
-#item-list li {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 12px;
-  width: 220px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
-}
-
-#item-list li:hover {
-  transform: scale(1.03);
-}
-
-/* Dark tema için kartlar */
-body.dark #item-list li {
-  background: #2c2c2c;
-  border: 1px solid #444;
-  color: #f1f1f1;
-}
-
-body.dark #item-list li strong {
-  color: gold;
-}
-
-body.dark #item-list li em {
-  color: #ccc;
-}
-
-body.dark #item-list li small {
-  color: #bbb;
-}
-
-/* Ürün görseli */
-#item-list li img {
-  border-radius: 6px;
-  margin-bottom: 8px;
-}
-
-/* Ürün adı ve fiyat */
-#item-list li strong {
-  font-size: 16px;
-  color: #333;
-}
-
-#item-list li em {
-  font-size: 13px;
-  color: #666;
-}
-
-/* Açıklama */
-#item-list li small {
-  display: block;
-  margin-top: 5px;
-  color: #555;
-}
-
-/* Düzenle / Sil butonları */
-#item-list li button {
-  margin-top: 8px;
-  margin-right: 6px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 13px;
-}
-
-#item-list li button:first-of-type {
-  background: #007bff;
-  color: #fff;
-}
-
-#item-list li button:last-of-type {
-  background: #dc3545;
-  color: #fff;
-}
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f9f9f9;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-header {
-  background: #6b3e26;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-}
-
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 15px;
-  font-weight: bold;
-}
-
-section {
-  margin: 30px;
-}
-
-section h2 {
-  border-bottom: 2px solid #6b3e26;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-}
-
-.menu-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.menu-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 15px;
-  width: 220px;
-  transition: transform 0.2s;
-}
-
-.menu-card:hover {
-  transform: scale(1.05);
-}
-
-.menu-img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-header {
-  background: #6b3e26;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 15px;
-  font-weight: bold;
-}
-
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 15px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  transition: 0.4s;
-}
-
-.accordion.active, .accordion:hover {
-  background-color: #ccc;
-}
-
-.panel {
-  display: none;
-  padding: 10px;
-  background: #fff;
-}
-
-.menu-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 15px;
-  margin-bottom: 10px;
-}
-
-.menu-img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f9f9f9;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-header {
-  background: #6b3e26;
-  color: #fff;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-header .logo {
-  max-height: 80px;
-  margin-bottom: 10px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.menu-category {
-  background: #fff;
-  margin: 20px auto;
-  padding: 20px;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.2s;
-}
-
-.menu-category:hover {
-  transform: scale(1.03);
-}
-
-.menu-category h2 a {
-  text-decoration: none;
-  color: #6b3e26;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-}
-
-footer .admin-link {
-  color: #6b3e26;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-header {
-  background: #6b3e26;
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-header .logo {
-  max-height: 100px;
-  margin-bottom: 15px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 36px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.menu-category {
-  background: #fff;
-  margin: 25px auto;
-  padding: 25px;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-  text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.menu-category:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.menu-category h2 a {
-  text-decoration: none;
-  color: #6b3e26;
-  font-size: 26px;
-  font-weight: bold;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #f4f4f4;
-  margin-top: 40px;
-}
-
-footer .admin-link {
-  color: #6b3e26;
-  text-decoration: none;
-  font-weight: bold;
-}
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-header {
-  background: #6b3e26;
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-header .logo {
-  max-height: 100px;
-  margin-bottom: 15px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 38px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.menu-category {
-  background: #fff;
-  margin: 25px auto;
-  padding: 25px;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-  text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.menu-category:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.menu-category h2 a {
-  text-decoration: none;
-  color: #6b3e26;
-  font-size: 26px;
-  font-weight: bold;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #f4f4f4;
-  margin-top: 40px;
-}
-
-footer .admin-link {
-  color: #6b3e26;
-  text-decoration: none;
-  font-weight: bold;
-}
+/* Genel tema */
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #f5e6d3, #d9c3a3);
@@ -399,6 +7,7 @@ body {
   color: #333;
 }
 
+/* Üst başlık */
 header {
   background: #6b3e26;
   color: #fff;
@@ -427,6 +36,7 @@ header hr {
   margin: 20px auto;
 }
 
+/* Ana sayfa menü başlıkları */
 .menu-category {
   background: #fff;
   margin: 20px auto;
@@ -436,7 +46,7 @@ header hr {
   border-radius: 12px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.15);
   text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
 }
 
 .menu-category a {
@@ -453,6 +63,7 @@ header hr {
   background: linear-gradient(135deg, #fff, #f7f1eb);
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -464,4 +75,79 @@ footer .admin-link {
   color: #6b3e26;
   text-decoration: none;
   font-weight: bold;
+}
+
+/* Admin panel genel */
+.admin-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.admin-container h2 {
+  margin-top: 0;
+  color: #6b3e26;
+  border-bottom: 2px solid #6b3e26;
+  padding-bottom: 10px;
+}
+
+/* Admin panel form */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-form input, 
+.admin-form textarea, 
+.admin-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.admin-form button {
+  background: #6b3e26;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.admin-form button:hover {
+  background: #8b5a3c;
+}
+
+/* Admin panel ürün listesi */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 220px;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
 }
